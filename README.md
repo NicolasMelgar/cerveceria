@@ -15,6 +15,6 @@ Para correr el proyecto
 > npm install
 > npm run dev
 
- El proyecto tiene un deploy en: [Proy-React Netlify](https://pages.github.com/).
+ El proyecto tiene un deploy en: [Proy-React Netlify](https://cerveceria-react.netlify.app/).
 
  ![Captura de pantalla de vista inicial del proyecto](./public/imgReadme.png)
