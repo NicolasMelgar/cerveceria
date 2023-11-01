@@ -33,13 +33,13 @@ const CartDetail = ({ product }) => {
     };
 
     const deleteProduct = () => {
-        console.log("borrando")
-            const foundItem = cart.find((item) => item.id === product.id);
-            const newCart = cart.filter((item) => {
-                return item !== foundItem;
-            });
-            setCart(newCart);
-    }
+        console.log("borrando");
+        const foundItem = cart.find((item) => item.id === product.id);
+        const newCart = cart.filter((item) => {
+            return item !== foundItem;
+        });
+        setCart(newCart);
+    };
 
     return (
         <div key={product.id} className="cart_detail">
@@ -94,7 +94,9 @@ const CartDetail = ({ product }) => {
                 </div>
             </div>
             <div className="cart_delete">
-                <h2 className="cart_delete_product" onClick={deleteProduct}>❌</h2>
+                <h2 className="cart_delete_product" onClick={deleteProduct}>
+                    ❌
+                </h2>
             </div>
         </div>
     );

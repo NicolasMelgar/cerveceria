@@ -12,6 +12,7 @@
     margin: auto;
     margin-bottom: 10px;
 }
+
 .form {
     width: 50%;
     display: flex;
@@ -47,9 +48,8 @@
     color: green;
 }
 
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }

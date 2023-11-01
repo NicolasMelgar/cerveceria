@@ -5,38 +5,37 @@ import { collection, query, getDocs } from "firebase/firestore";
 export const ProductsContext = createContext();
 
 const ProductsProvider = ({ children }) => {
-/* Agregando el cart*/
-    
+    /* Agregando el cart*/
+
     const [cart, setCart] = useState([]);
 
     console.log(cart);
 
     const addProduct = (product, cant) => {
-        if(!isInCart(product.id)) {
-            setCart(prev => [...prev, {...product, cant}])
+        if (!isInCart(product.id)) {
+            setCart((prev) => [...prev, { ...product, cant }]);
         } else {
-            console.log("El producto ya existe")
+            console.log("El producto ya existe");
         }
-    }
+    };
 
     const removeProduct = (productId) => {
-        const newCart = cart.filter(product => product.id !== productId )
-        setCart(newCart)
-    }
+        const newCart = cart.filter((product) => product.id !== productId);
+        setCart(newCart);
+    };
 
     const clearCart = () => {
-        setCart([])
-    }
+        setCart([]);
+    };
 
     const isInCart = (productId) => {
-        return cart.some(product => product.id === productId)
-    }
+        return cart.some((product) => product.id === productId);
+    };
 
-
-/*Hasta acá lo que agregué al carrito*/   
+    /*Hasta acá lo que agregué al carrito*/
 
     const [products, setProducts] = useState([]);
-
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const getProducts = async () => {
@@ -49,15 +48,24 @@ const ProductsProvider = ({ children }) => {
             setProducts(docs);
         };
         getProducts();
-        // setTimeout(() => {
-        //     setIsLoading(false);
-        //   }, 1000);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
     }, []);
 
-
-
     return (
-        <ProductsContext.Provider value={{ products, cart, setCart, addProduct, removeProduct, clearCart }}>
+        <ProductsContext.Provider
+            value={{
+                products,
+                cart,
+                setCart,
+                addProduct,
+                removeProduct,
+                clearCart,
+                isLoading,
+                setIsLoading,
+            }}
+        >
             {children}
         </ProductsContext.Provider>
     );

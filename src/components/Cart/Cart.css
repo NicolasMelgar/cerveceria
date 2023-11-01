@@ -1,4 +1,4 @@
-.cart{
+.cart {
     margin-top: 100px;
     text-align: center;
 }
@@ -16,6 +16,7 @@
 .cart_title {
     margin: 30px;
 }
+
 .button_cart {
     cursor: pointer;
     font-size: 1.3rem;
@@ -27,8 +28,8 @@
     transition: all 1s ease-in-out;
 }
 
-.button_cart:hover { 
-    transform:scale(1.2);
+.button_cart:hover {
+    transform: scale(1.2);
 }
 
 .buy {
@@ -36,7 +37,7 @@
 }
 
 .clear {
-    background-color:red;
+    background-color: red;
 }
 
 .continue {

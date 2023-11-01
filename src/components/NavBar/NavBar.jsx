@@ -16,7 +16,6 @@ const NavBar = () => {
                 <Link to={`/category/food`}>PLATOS</Link>
                 <Link to={`/category/Special`}>ESPECIALES</Link>
             </div>
-
             <div
                 className={`navbar_toggle ${isOpen && "open"}`}
                 onClick={() => setIsOpen(!isOpen)}
@@ -35,7 +34,7 @@ const NavBar = () => {
 
             <div className="navbar_cart">
                 <Link to={"/cart"}>
-                    🛒 {cart.length > 0 ? <CartTotal /> : null} 
+                    🛒 {cart.length > 0 ? <CartTotal /> : null}
                 </Link>
             </div>
         </nav>

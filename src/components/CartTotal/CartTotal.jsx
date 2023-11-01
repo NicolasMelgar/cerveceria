@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
-import './CartTotal.css';
+import "./CartTotal.css";
 
 const CartTotal = () => {
-
     const { cart } = useContext(ProductsContext);
 
     const itemsQuanty = cart.reduce((acc, el) => acc + el.quantity, 0);
@@ -12,6 +11,6 @@ const CartTotal = () => {
             <span className="cart_item_total">{itemsQuanty}</span>
         </div>
     );
-}
+};
 
-export default CartTotal
+export default CartTotal;

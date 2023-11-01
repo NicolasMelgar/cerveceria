@@ -1,6 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
 import ListCategory from "../../components/ListCategory/ListCategory";
-import "./Category.css";
+//import "./Category.css";
 
 const Category = () => {
     return (

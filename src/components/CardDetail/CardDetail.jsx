@@ -37,7 +37,11 @@ const CardDetail = ({ product }) => {
             <h2 className="card_quantity">Cantidad: {cant}</h2>
             <h3 className="card_description">{product.description}</h3>
             <div>
-                <button type="button" className="card_button_cant" onClick={decrement}>
+                <button
+                    type="button"
+                    className="card_button_cant"
+                    onClick={decrement}
+                >
                     -
                 </button>
                 <Link to={"/cart"} key={product.id}>
@@ -50,7 +54,11 @@ const CardDetail = ({ product }) => {
                         Comprar
                     </button>
                 </Link>
-                <button type="button" className="card_button_cant" onClick={increment}>
+                <button
+                    type="button"
+                    className="card_button_cant"
+                    onClick={increment}
+                >
                     +
                 </button>
             </div>

@@ -9,12 +9,12 @@
 }
 
 .card:hover {
-    background-color:var(--color-card);
+    background-color: var(--color-card);
     box-shadow: 5px 5px 5px 5px var(--sombra-card-hover);
     transform: scale(1.1);
 }
 
-.card_button{
+.card_button {
     background-color: var(--sombra-card);
     padding: 8px 38px;
     margin: 5px;
@@ -43,22 +43,24 @@
     text-decoration: overline;
 }
 
-.card_title, .card_sub_title, .card_stock, .card_quantity {
+.card_title,
+.card_sub_title,
+.card_stock,
+.card_quantity {
     padding: 5px;
 }
-
 
 .out {
     background-color: grey;
     box-shadow: none;
-    opacity: .3;
-    .card_quantity{
+    opacity: 0.3;
+    .card_quantity {
         display: none;
     }
-    .card_price{
+    .card_price {
         display: none;
     }
-    .card_button{
+    .card_button {
         display: none;
     }
 }
@@ -72,9 +74,3 @@
         width: 300px;
     }
 }
-
-/* @media (max-width: 800px) {
-    .card {
-        width: 300px;
-    }
-} */

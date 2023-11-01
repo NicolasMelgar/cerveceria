@@ -1,6 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
 import ProductDetail from "../../components/ProductDetail/ProductDetail";
-import "./Detail.css";
+//import "./Detail.css";
 
 const Detail = () => {
     return (

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
-import './PriceTotal.css'
+import "./PriceTotal.css";
 const PriceTotal = () => {
     const { cart } = useContext(ProductsContext);
 
